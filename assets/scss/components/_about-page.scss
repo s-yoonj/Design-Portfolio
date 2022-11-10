@@ -1,0 +1,248 @@
+@include tablet {
+  /*브라우저 사이즈768px이상, 1023px 이하일때*/
+}
+.about-page {
+  position: relative;
+  padding: 70px 0px;
+  padding-left: 250px;
+  padding-right: 180px;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 160px 180px 60px 180px;
+  }
+
+  .about-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .about-wrap {
+      max-width: 1300px;
+      padding: 40px 60px;
+      background-color: white;
+      border-radius: 50px;
+      box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
+      transition: all 0.3s;
+      &:hover {
+        box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
+      }
+
+      .about-title {
+        font-size: 45px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        @include tablet {
+          /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          font-size: 30px;
+        }
+      }
+
+      .about-item-group {
+        .about-item-section {
+          .about-item {
+            display: grid;
+            grid-template-columns: 1fr 1px 2fr;
+            justify-items: center;
+
+            .profile-about-area {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              text-align: center;
+              margin-right: 60px;
+
+              .profile-img-area {
+                display: flex;
+                justify-content: center;
+                .profile-img {
+                  position: relative;
+                  width: 220px;
+                  height: 220px;
+                  border-radius: 50%;
+                  background-color: #f1f1f1;
+                  overflow: hidden;
+                  border: 0.5px solid rgb(196, 196, 196);
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 150px;
+                    height: 150px;
+                  }
+
+                  .profile-picture {
+                    position: absolute;
+                    width: 85%;
+                    height: auto;
+                    bottom: -20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    object-fit: cover;
+                  }
+                }
+              }
+              .profile-text-group {
+                .intro-self-txt1 {
+                  font-size: 15px;
+                  line-height: 25px;
+                }
+                .intro-self-txt2 {
+                  margin-top: 20px;
+                  font-size: 15px;
+                  line-height: 25px;
+                  font-weight: 800;
+                }
+              }
+              .sns-link-area {
+                .sns-title-box {
+                  display: flex;
+                  justify-content: center;
+                  .sns-title {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #2f66e5;
+                    border-radius: 20px;
+                    height: 35px;
+                    width: 130px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: white;
+                  }
+                }
+                .sns-item-group {
+                  margin-top: 20px;
+                  display: flex;
+                  justify-content: center;
+                  .sns-link {
+                    margin: 0 20px;
+                    display: flex;
+                    align-items: center;
+                    .sns-img {
+                      width: 30px;
+                      height: 30px;
+                    }
+                    .sns-txt {
+                      margin-left: 10px;
+                      color: black;
+                      font-weight: 500;
+                      @include tablet {
+                        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .section-line {
+              width: 1px;
+              height: 100%;
+              background: #dbdbdb;
+            }
+
+            .profile-list {
+              .profile-item-group {
+                margin-left: 60px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 100px;
+                row-gap: 60px;
+                @include tablet {
+                  /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                  grid-template-columns: 20% 80%;
+                }
+
+                .profile-area {
+                  .profile-txt {
+                    display: flex;
+                    align-items: center;
+                    font-size: 17px;
+                    font-weight: bold;
+                    @include tablet {
+                      /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                      font-size: 15px;
+                    }
+                    &::before {
+                      content: "";
+                      display: inline-block;
+                      width: 4px;
+                      height: 15px;
+                      margin-right: 10px;
+                      background: #2f66e5;
+                    }
+                  }
+                  .profile-item {
+                    margin-top: 10px;
+                    .sub-title {
+                      display: inline-block;
+                      margin-right: 10px;
+                      font-size: 15px;
+                      font-weight: bold;
+                      @include tablet {
+                        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                        font-size: 13px;
+                      }
+                    }
+                    .sub-txt {
+                      margin-top: 10px;
+                      display: inline-block;
+                      font-size: 15px;
+                      @include tablet {
+                        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                        margin-top: 5px;
+                        font-size: 13px;
+                      }
+                    }
+                  }
+                }
+                .skills-area {
+                  grid-column-start: 1;
+                  grid-column-end: 3;
+                  .skills-txt {
+                    display: flex;
+                    align-items: center;
+                    font-size: 17px;
+                    font-weight: bold;
+                    &::before {
+                      content: "";
+                      display: inline-block;
+                      width: 4px;
+                      height: 17px;
+                      margin-right: 10px;
+                      background: #2f66e5;
+                    }
+                  }
+                  .skills-ico-items {
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+                    margin-top: 20px;
+                    img {
+                      width: 60px;
+                      height: 60px;
+                    }
+                    .js-ico {
+                      padding: 6px;
+                    }
+                    .skill-name {
+                      font-size: 12px;
+                      font-weight: 700;
+                      margin-top: 5px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
