@@ -8,19 +8,40 @@
   display: flex;
   align-items: center;
   background-color: white;
+  @include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 160px 100px 60px 100px;
+  }
+  @include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
+  }
 
   .uiux-wrap {
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
+
     .uiux-group {
       max-width: 1300px;
+      @include tablet {
+        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+        max-width: 1000px;
+      }
+      @include mobile {
+        /*브라우저 사이즈767px이하일때*/
+        max-width: 400px;
+      }
       .uiux-gruop-item {
         display: grid;
         grid-template-columns: 40% 60%;
         justify-content: center;
         align-items: center;
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          display: inline-block;
+        }
         .uiux-txt-item {
           display: flex;
           justify-content: center;
@@ -29,9 +50,44 @@
 
           .uiux-point-txt {
             .uiux-title {
+              position: relative;
               font-size: 43px;
               font-weight: 700;
               margin-bottom: 50px;
+              @include tablet {
+                /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                font-size: 35px;
+                margin-bottom: 30px;
+              }
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                font-size: 40px;
+              }
+              .uiux-toggle-btn {
+                display: none;
+              }
+
+              @include mobile {
+                /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                .uiux-toggle-btn {
+                  display: block;
+                  position: absolute;
+                  top: -15px;
+                  right: -60px;
+                  .uiux-toggle-svg-ico {
+                    background-color: #4434ed;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    padding: 15px;
+                    color: white;
+                    .p-m-ico {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                }
+              }
             }
 
             .uiux-txt-section-group {
@@ -55,6 +111,10 @@
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                 justify-content: center;
                 align-items: center;
+                @include tablet {
+                  /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                  margin: 30px 0;
+                }
                 .keyword-box {
                   display: inline-block;
                   width: 110px;
@@ -66,6 +126,16 @@
                   align-items: center;
                   justify-content: center;
                   text-align: center;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 90px;
+                    height: 90px;
+                  }
+                  @include mobile {
+                    /*브라우저 사이즈767px이하일때*/
+                    width: 90px;
+                    height: 90px;
+                  }
                   .keyword {
                     color: black;
                     font-size: 12px;
@@ -85,6 +155,16 @@
                   color: white;
                   font-size: 12px;
                   font-weight: 700;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 90px;
+                    height: 90px;
+                  }
+                  @include mobile {
+                    /*브라우저 사이즈767px이하일때*/
+                    width: 90px;
+                    height: 90px;
+                  }
 
                   .keyword {
                     color: white;
@@ -131,6 +211,10 @@
           background-color: rgb(235, 235, 235);
           border-radius: 50px;
           padding: 40px;
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            display: none;
+          }
 
           .uiux-img-box-wrap {
             display: grid;
@@ -151,6 +235,14 @@
               .uiux-img-concept-title {
                 font-size: 25px;
                 font-weight: 700;
+                @include tablet {
+                  /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                  font-size: 20px;
+                }
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  font-size: 20px;
+                }
               }
               .uiux-img-concept {
                 width: 100%;
@@ -166,6 +258,11 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 100px;
+                    height: 100px;
+                  }
                   .boxcolor-keyword {
                     color: white;
                   }
@@ -212,6 +309,10 @@
 
                   display: flex;
                   justify-content: center;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    max-height: 350px;
+                  }
                   .uiux-box-bottom {
                     position: absolute;
                     width: 130%;
@@ -246,6 +347,7 @@
                     border: 8px solid #4434ed;
                     background-color: white;
                     overflow: hidden;
+
                     .web-main-img {
                       width: 100%;
                       height: auto;

@@ -231,7 +231,7 @@ html {
   }
 }
 .container {
-  padding: 160px 60px 60px 60px;
+  padding: 160px 40px 60px 40px;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -243,6 +243,13 @@ html {
   .container {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
     padding: 160px 160px 60px 160px;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
+    height: 100vh;
   }
 }
 .container .main-area {
@@ -258,9 +265,22 @@ html {
   font-size: 100px;
   font-weight: 700;
 }
+@media (max-width: 767px) {
+  .container .main-area .main-title .main-title-01 {
+    /*브라우저 사이즈767px이하일때*/
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
 .container .main-area .main-title .main-title-02 {
   font-size: 120px;
   font-weight: 300;
+}
+@media (max-width: 767px) {
+  .container .main-area .main-title .main-title-02 {
+    /*브라우저 사이즈767px이하일때*/
+    font-size: 60px;
+  }
 }
 .container .main-area .main-title .main-title-03 {
   margin-top: 60px;
@@ -270,6 +290,19 @@ html {
   font-size: 40px;
   line-height: 60px;
   bottom: 60px;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .container .main-area .main-title .main-title-03 {
+    /*브라우저 사이즈767px이하일때*/
+    width: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-area .main-title .main-title-03 {
+    /*브라우저 사이즈767px이하일때*/
+    width: 330px;
+    font-size: 20px;
+  }
 }
 .container .main-area .main-title .main-title-03 .blink {
   -webkit-animation: blink 0.5s infinite;
@@ -307,6 +340,18 @@ html {
     left: 0;
   }
 }
+@media (max-width: 767px) {
+  .container .main-area .menu-area {
+    /*브라우저 사이즈767px이하일때*/
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    top: 0;
+    left: 0;
+  }
+}
 .container .main-area .menu-area .menu-list-gruop {
   font-size: 10px;
   font-weight: 700;
@@ -318,9 +363,24 @@ html {
     justify-content: center;
   }
 }
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop {
+    /*브라우저 사이즈767px이하일때*/
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (min-width: 768px) and (max-width: 1400px) {
   .container .main-area .menu-area .menu-list-gruop .menu-list {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop .menu-list {
+    /*브라우저 사이즈767px이하일때*/
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -344,6 +404,14 @@ html {
   .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
     margin: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn {
+    /*브라우저 사이즈767px이하일때*/
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
   }
 }
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn .menu-name {
@@ -381,6 +449,22 @@ html {
   transform: rotate(180deg);
   z-index: 1;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .container .main-area .top-img {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    width: 40px;
+    height: 40px;
+    right: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-area .top-img {
+    /*브라우저 사이즈767px이하일때*/
+    width: 40px;
+    height: 40px;
+    right: 30px;
+  }
+}
 .container .main-area .hidden {
   display: none;
 }
@@ -403,7 +487,13 @@ html {
 @media (min-width: 768px) and (max-width: 1400px) {
   .about-page {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
-    padding: 160px 180px 60px 180px;
+    padding: 160px 100px 60px 100px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
   }
 }
 .about-page .about-area {
@@ -421,6 +511,23 @@ html {
   box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
   transition: all 0.3s;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    max-width: 1000px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap {
+    /*브라우저 사이즈767px이하일때*/
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 650px;
+  }
+}
 .about-page .about-area .about-wrap:hover {
   box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
 }
@@ -435,10 +542,38 @@ html {
     font-size: 30px;
   }
 }
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-title {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section {
+    /*브라우저 사이즈767px이하일때*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item {
   display: grid;
   grid-template-columns: 1fr 1px 2fr;
   justify-items: center;
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item {
+    /*브라우저 사이즈767px이하일때*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-right: 0;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area {
   display: flex;
@@ -446,6 +581,12 @@ html {
   justify-content: space-between;
   text-align: center;
   margin-right: 60px;
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area {
+    /*브라우저 사이즈767px이하일때*/
+    margin-right: 0;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-img-area {
   display: flex;
@@ -477,15 +618,52 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group {
+    /*브라우저 사이즈767px이하일때*/
+    margin: 20px 0;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt1 {
   font-size: 15px;
   line-height: 25px;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt1 {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt1 {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 13px;
+    width: 200px;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt2 {
   margin-top: 20px;
   font-size: 15px;
   line-height: 25px;
   font-weight: 800;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt2 {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .profile-text-group .intro-self-txt2 {
+    /*브라우저 사이즈767px이하일때*/
+    font-size: 13px;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-title-box {
   display: flex;
@@ -503,15 +681,61 @@ html {
   font-weight: 700;
   color: white;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-title-box .sns-title {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    height: 30px;
+    width: 120px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-title-box .sns-title {
+    /*브라우저 사이즈767px이하일때*/
+    height: 30px;
+    width: 120px;
+    font-size: 13px;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group .sns-link {
   margin: 0 20px;
   display: flex;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group .sns-link {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    margin: 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group .sns-link {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    margin: 10px 0;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group .sns-link .sns-img {
   width: 30px;
@@ -528,10 +752,28 @@ html {
     font-size: 15px;
   }
 }
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-about-area .sns-link-area .sns-item-group .sns-link .sns-txt {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 15px;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .section-line {
   width: 1px;
   height: 100%;
   background: #dbdbdb;
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .section-line {
+    /*브라우저 사이즈767px이하일때*/
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list {
+    /*브라우저 사이즈767px이하일때*/
+    display: none;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group {
   margin-left: 60px;
@@ -544,7 +786,12 @@ html {
 @media (min-width: 768px) and (max-width: 1400px) {
   .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
-    grid-template-columns: 20% 80%;
+    margin-left: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+    row-gap: 60px;
   }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .profile-area .profile-txt {
@@ -579,6 +826,7 @@ html {
 @media (min-width: 768px) and (max-width: 1400px) {
   .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .profile-area .profile-item .sub-title {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    line-height: 20px;
     font-size: 13px;
   }
 }
@@ -590,6 +838,7 @@ html {
 @media (min-width: 768px) and (max-width: 1400px) {
   .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .profile-area .profile-item .sub-txt {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    display: block;
     margin-top: 5px;
     font-size: 13px;
   }
@@ -598,11 +847,24 @@ html {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-txt {
   display: flex;
   align-items: center;
   font-size: 17px;
   font-weight: bold;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-txt {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 15px;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-txt::before {
   content: "";
@@ -612,15 +874,36 @@ html {
   margin-right: 10px;
   background: #2f66e5;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-txt::before {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    height: 15px;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-ico-items {
   display: flex;
   justify-content: space-between;
   text-align: center;
   margin-top: 20px;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-ico-items {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-ico-items img {
   width: 60px;
   height: 60px;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-ico-items img {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    width: 30px;
+    height: 30px;
+  }
 }
 .about-page .about-area .about-wrap .about-item-group .about-item-section .about-item .profile-list .profile-item-group .skills-area .skills-ico-items .js-ico {
   padding: 6px;
@@ -642,6 +925,18 @@ html {
   align-items: center;
   background-color: white;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 160px 100px 60px 100px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
+  }
+}
 .uiux-page .uiux-wrap {
   position: relative;
   width: 100%;
@@ -651,11 +946,29 @@ html {
 .uiux-page .uiux-wrap .uiux-group {
   max-width: 1300px;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    max-width: 1000px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group {
+    /*브라우저 사이즈767px이하일때*/
+    max-width: 400px;
+  }
+}
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item {
   display: grid;
   grid-template-columns: 40% 60%;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item {
+    /*브라우저 사이즈767px이하일때*/
+    display: inline-block;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item {
   display: flex;
@@ -664,9 +977,49 @@ html {
   padding-right: 60px;
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title {
+  position: relative;
   font-size: 43px;
   font-weight: 700;
   margin-bottom: 50px;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title {
+    /*브라우저 사이즈767px이하일때*/
+    font-size: 40px;
+  }
+}
+.uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title .uiux-toggle-btn {
+  display: none;
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+  }
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title .uiux-toggle-btn {
+    display: block;
+    position: absolute;
+    top: -15px;
+    right: -60px;
+  }
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title .uiux-toggle-btn .uiux-toggle-svg-ico {
+    background-color: #4434ed;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    color: white;
+  }
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-title .uiux-toggle-btn .uiux-toggle-svg-ico .p-m-ico {
+    width: 100%;
+    height: 100%;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group {
   height: 100%;
@@ -688,6 +1041,12 @@ html {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    margin: 30px 0;
+  }
+}
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box {
   display: inline-block;
   width: 110px;
@@ -699,6 +1058,20 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box {
+    /*브라우저 사이즈767px이하일때*/
+    width: 90px;
+    height: 90px;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box .keyword {
   color: black;
@@ -718,6 +1091,20 @@ html {
   color: white;
   font-size: 12px;
   font-weight: 700;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box-color {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box-color {
+    /*브라우저 사이즈767px이하일때*/
+    width: 90px;
+    height: 90px;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-txt-item .uiux-point-txt .uiux-txt-section-group .keyword-box-area .keyword-box-color .keyword {
   color: white;
@@ -756,6 +1143,12 @@ html {
   border-radius: 50px;
   padding: 40px;
 }
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area {
+    /*브라우저 사이즈767px이하일때*/
+    display: none;
+  }
+}
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap {
   display: grid;
   height: 100%;
@@ -776,6 +1169,18 @@ html {
   font-size: 25px;
   font-weight: 700;
 }
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-main .uiux-img-concept-title {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-main .uiux-img-concept-title {
+    /*브라우저 사이즈767px이하일때*/
+    font-size: 20px;
+  }
+}
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-main .uiux-img-concept {
   width: 100%;
   display: flex;
@@ -790,6 +1195,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-main .uiux-img-concept .uiux-keyword-box {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    width: 100px;
+    height: 100px;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-main .uiux-img-concept .uiux-keyword-box .boxcolor-keyword {
   color: white;
@@ -832,6 +1244,12 @@ html {
   overflow: hidden;
   display: flex;
   justify-content: center;
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-section .uiux-img-box .uiux-img-box-item {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    max-height: 350px;
+  }
 }
 .uiux-page .uiux-wrap .uiux-group .uiux-gruop-item .uiux-img-area .uiux-img-box-wrap .uiux-img-box-section .uiux-img-box .uiux-img-box-item .uiux-box-bottom {
   position: absolute;
