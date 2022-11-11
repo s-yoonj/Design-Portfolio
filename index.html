@@ -114,12 +114,13 @@
                                                     alt="velog-ico">
                                                 <span class="sns-txt">Velog</span>
                                             </a>
-                                            <a href="https://www.notion.so/s-yoonj/400fc83936084558b7443280ad1604df"
-                                                class="sns-link" target="_blank">
+                                            <!--
+                                            <a href="#" class="sns-link" target="_blank">
                                                 <img class="sns-img" src="./assets/images/notion_ico.png"
                                                     alt="github-ico">
                                                 <span class="sns-txt">자기소개서</span>
                                             </a>
+                                            -->
                                         </div>
                                     </div>
                                 </div>
@@ -246,33 +247,20 @@
                         <div class="uiux-txt-item">
 
                             <div class="uiux-point-txt">
-                                <div class="uiux-title">UI/UX REDESIGN
+                                <div class="uiux-title">UI/UX REDESIGN </div>
 
-                                    <a href="#uiux-img-area-pop" class="uiux-toggle-btn mo_btn_open">
+                                <a href="#uiux-img-area-pop" class="uiux-toggle-btn mo_btn_open">
 
-                                        <div class="uiux-toggle-svg-ico">
-                                            <svg class="p-m-ico" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg>
-                                        </div>
+                                    <div class="uiux-toggle-svg-ico">
+                                        <svg class="p-m-ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                    </div>
 
-                                    </a>
-                                    <a href="#uiux-img-area-pop" class="uiux-toggle-btn mo_btn_close">
-
-                                        <div class="uiux-toggle-svg-ico">
-                                            <svg class="p-m-ico" xmlns="http://www.w3.org/2000/svg" width="24"
-                                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg>
-                                        </div>
-
-                                    </a>
-                                </div>
+                                </a>
 
                                 <div class="uiux-txt-section-group">
                                     <div class="uiux-txt-section redesign-area">
@@ -315,11 +303,13 @@
                                         <div class="uiux-txt-title2">DESIGN</div>
                                         <div class="uiux-txt2">개인작업 100% | Photoshop</div>
                                     </div>
+
+
                                 </div>
                             </div>
                         </div>
 
-                        <div class="uiux-img-area">
+                        <div id="uiux-img-area-pop" class="uiux-img-area">
                             <div class="uiux-img-box-wrap">
                                 <div class="uiux-img-box-main">
                                     <div class="uiux-img-concept-title">VETEZE 리브랜딩</div>
@@ -440,6 +430,15 @@
                                     </div>
                                 </div>
 
+                                <button type="button" class="uiux-toggle-btn mo_btn_close">
+                                    <div class="uiux-toggle-svg-ico">
+                                        <svg class="p-m-ico" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                    </div>
+                                </button>
                             </div>
                         </div>
 
@@ -548,6 +547,7 @@
                                 <div class="contents-title">CONTENTS DESIGN</div>
                                 <div class="contents-txt-sub-item">
                                     <div class="contents-txt-sub-title">그래픽 디자인 작업물</div>
+                                    <div class="mo-contents-sub-txt">개인작업 100%</div>
                                     <div class="contents-sub-txt">
                                         SNS | 인스타그램, 카카오채널, 페이스북<br>
                                         플랫폼 별 가이드라인에 맞게 리사이징<br>
@@ -566,6 +566,7 @@
                                 </div>
 
                                 <div class="contents-box-group">
+
                                     <button data-id="sns" class="contents-box active">
                                         <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -576,6 +577,7 @@
                                         </svg>
                                         <span class="contents-box-title">SNS<br>컨텐츠</span>
                                     </button>
+
                                     <button data-id="poster" class="contents-box 1">
                                         <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -586,8 +588,9 @@
                                         </svg>
                                         <span class="contents-box-title">포스터</span>
                                     </button>
+
                                     <button data-id="lookbook" class="contents-box 2">
-                                        <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        <svg class=" contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path
@@ -596,8 +599,9 @@
                                         </svg>
                                         <span class="contents-box-title">룩북</span>
                                     </button>
+
                                     <button data-id="event_page" class="contents-box 3">
-                                        <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        <svg class=" contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path
@@ -606,7 +610,8 @@
                                         </svg>
                                         <span class="contents-box-title">이벤트<br>페이지</span>
                                     </button>
-                                    <button data-id="product_page" class="contents-box 4 ">
+
+                                    <button data-id="product_page" class="contents-box 4">
                                         <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -616,8 +621,9 @@
                                         </svg>
                                         <span class="contents-box-title">상세<br>페이지</span>
                                     </button>
+
                                     <button data-id="retouching" class="contents-box 5">
-                                        <svg class="contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
+                                        <svg class=" contents-box-img" xmlns="http://www.w3.org/2000/svg" width="24"
                                             height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path
@@ -626,6 +632,7 @@
                                         </svg>
                                         <span class="contents-box-title">상품<br>보정</span>
                                     </button>
+
                                 </div>
                                 <div class="contents-sub-txt-item">
 
@@ -635,7 +642,7 @@
                             </div>
                         </div>
 
-                        <div class="contents-img-area">
+                        <div id="contents-img-area-pop" class="contents-img-area">
                             <div class="contents-img-group">
                                 <div class="cibp contents-img-box-page1" id="sns">
                                     <div class="contents-img-box-title" id="contents-img-box1">
@@ -1565,9 +1572,10 @@
 
     <script src="./js/star.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/page-poup.js"></script>
+    <script src="./js/page-popup.js"></script>
     <script src="./js/contents-area.js"></script>
     <script src="./js/web-coding.js"></script>
+    <script src="./js/mo-pop.js"></script>
 </body>
 
 </html>

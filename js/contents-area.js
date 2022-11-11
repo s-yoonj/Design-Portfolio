@@ -21,30 +21,6 @@ for (let i = 0; i < btn.length; i++) {
 }
 
 // //img carousel
-// const carouselSlide = document.querySelector(".carousel-img-box-item");
-// const carouselImages = document.querySelectorAll(".carousel-img-box");
-
-// const pBtn = document.querySelector(".prev-btn");
-// const nBtn = document.querySelector(".next-btn");
-
-// let counter = 0;
-// let size = carouselImages[0].clientWidth;
-// carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-// // Buttons
-// nBtn.addEventListener("click", function () {
-//   if (counter >= carouselImages.length - 1) return;
-//   carouselSlide.style.transition = "transform 0.4s ease-in-out";
-//   counter++;
-//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-// });
-
-// pBtn.addEventListener("click", function () {
-//   if (counter <= 0) return;
-//   carouselSlide.style.transition = "transform 0.4s ease-in-out";
-//   counter--;
-//   carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-// });
 
 const container = document.querySelector(".carousel-img-box-item");
 const prevBtn = document.querySelector(".prev-btn");

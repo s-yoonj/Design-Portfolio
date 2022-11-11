@@ -9,6 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 160px 100px 60px 100px;
+  }
+  @include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
+  }
 
   .webcoding-area {
     width: 100%;
@@ -24,6 +32,14 @@
         color: white;
         font-size: 45px;
         font-weight: 700;
+        @include tablet {
+          /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          font-size: 35px;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 35px;
+        }
       }
     }
 
@@ -37,6 +53,15 @@
           margin-bottom: 30px;
           display: flex;
           justify-content: center;
+          @include tablet {
+            /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          }
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+          }
           .pj-menu-item {
             margin: 0 20px;
             display: inline-block;
@@ -50,6 +75,7 @@
               align-items: center;
               text-align: center;
               cursor: pointer;
+
               .pj-menu-name {
                 font-size: 13px;
                 color: white;
@@ -72,6 +98,15 @@
             border-radius: 50px;
             box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
             transition: all 0.3s;
+            @include tablet {
+              /*브라우저 사이즈768px이상, 1023px 이하일때*/
+              height: 300px;
+            }
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              max-width: 300px;
+              height: 100%;
+            }
             &:hover {
               box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
             }
@@ -103,11 +138,20 @@
           }
           .pj-link-ico {
             display: flex;
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              align-items: center;
+              flex-direction: column;
+            }
             .pj-link {
               display: flex;
               align-items: center;
               padding: 0 20px;
               color: white;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                padding: 5px 0;
+              }
               .monitor-ico {
                 width: 20px;
                 height: 20px;
@@ -132,12 +176,27 @@
           position: absolute;
           left: 20%;
           bottom: 15px;
+          @include tablet {
+            /*브라우저 사이즈768px이상, 1023px 이하일때*/
+            left: 8%;
+            bottom: 15px;
+          }
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            display: none;
+          }
 
           .arrow-ico {
             width: 320px;
             height: 200px;
             filter: invert(100%);
             transform: rotate(180deg);
+            @include tablet {
+              /*브라우저 사이즈768px이상, 1023px 이하일때*/
+              width: 220px;
+              height: 180px;
+              transform: rotate(185deg);
+            }
           }
         }
       }

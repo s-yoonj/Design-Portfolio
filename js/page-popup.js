@@ -1,5 +1,5 @@
 const target = document.querySelectorAll(".btn_open");
-const btnPopClose = document.querySelectorAll(".pop_wrap .btn_close");
+const btnPopClose = document.querySelectorAll(".btn_close");
 let targetID;
 
 const bodyArea = document.querySelector("body");

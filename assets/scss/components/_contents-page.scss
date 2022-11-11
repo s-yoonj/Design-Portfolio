@@ -8,45 +8,116 @@
   display: flex;
   align-items: center;
   background-color: white;
+  @include tablet {
+    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+    padding: 160px 100px 60px 100px;
+  }
+  @include mobile {
+    /*브라우저 사이즈767px이하일때*/
+    padding: 160px 20px 60px 20px;
+  }
 
   .contents-wrap {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: white;
+    @include mobile {
+      /*브라우저 사이즈767px이하일때*/
+      height: 100%;
+    }
 
     .contents-group {
       max-width: 1300px;
+      @include tablet {
+        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+        max-width: 1000px;
+      }
+      @include mobile {
+        /*브라우저 사이즈767px이하일때*/
+        width: 100%;
+      }
       .contents-group-item {
         display: grid;
         grid-template-columns: 40% 60%;
         justify-content: center;
         align-items: center;
-
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          width: 100%;
+          display: block;
+        }
         .contents-txt-area {
           width: 100%;
           height: 100%;
           padding-right: 60px;
           display: flex;
           justify-content: center;
+          position: relative;
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            width: 100%;
+            max-height: 300px;
+            padding-right: 0;
+          }
           .contents-txt-item {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              justify-content: center;
+              align-items: center;
+            }
+
             .contents-title {
               font-size: 43px;
               font-weight: 800;
+              @include tablet {
+                /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                font-size: 35px;
+              }
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                font-size: 35px;
+              }
             }
 
             .contents-txt-sub-item {
               margin: 50px 0;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                margin: 20px 0;
+              }
+
               .contents-txt-sub-title {
                 margin-bottom: 10px;
                 font-size: 20px;
                 font-weight: 700;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: inline;
+                  font-size: 15px;
+                  margin-bottom: 0;
+                }
+              }
+              .mo-contents-sub-txt {
+                display: none;
+
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: inline;
+                  font-size: 14px;
+                  line-height: 30px;
+                }
               }
               .contents-sub-txt {
                 font-size: 14px;
                 line-height: 30px;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: none;
+                }
               }
             }
             .contents-sub-txt2 {
@@ -57,23 +128,39 @@
                 margin-left: 10px;
                 font-size: 15px;
                 font-weight: 700;
+                line-height: 23px;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  font-size: 13px;
+                }
               }
 
               .triangle-img {
                 color: #2f66e5;
                 fill: #2f66e5;
                 transform: rotate(180deg);
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  width: 13px;
+                  height: 13px;
+                }
               }
             }
 
             .contents-box-group {
               max-width: 430px;
-
               margin: 40px 0;
               display: grid;
               grid-template-columns: repeat(3, 1fr);
               text-align: center;
               row-gap: 20px;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: flex;
+                max-width: 100%;
+                margin: 20px 0;
+                overflow-x: scroll;
+              }
 
               .contents-box {
                 position: relative;
@@ -88,6 +175,16 @@
                   height: 120px;
                   color: #2f66e5;
                   stroke-width: 0.6px;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 100px;
+                    height: 100px;
+                  }
+                  @include mobile {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    width: 80px;
+                    height: 80px;
+                  }
                 }
 
                 .contents-box-title {
@@ -101,6 +198,17 @@
                   font-size: 18px;
                   font-weight: 800;
                   line-height: 25px;
+                  @include tablet {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    font-size: 15px;
+                    line-height: 20px;
+                  }
+                  @include mobile {
+                    /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                    font-size: 13px;
+                    line-height: 20px;
+                    transform: translate(-50%, -40%);
+                  }
                 }
 
                 &:hover {
@@ -130,6 +238,10 @@
 
             .contents-sub-txt-item {
               width: 100%;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: none;
+              }
               .contents-sub-txt-title {
                 display: inline-block;
                 font-size: 20px;
@@ -150,6 +262,9 @@
           background-color: rgb(235, 235, 235);
           border-radius: 50px;
           padding: 50px;
+          @include mobile {
+            padding: 30px;
+          }
           .contents-img-group {
             height: 100%;
             display: flex;
@@ -159,12 +274,19 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 30px;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 20px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -173,6 +295,10 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 10px;
+                    font-size: 13px;
+                  }
                 }
               }
 
@@ -181,11 +307,15 @@
                 height: 100%;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
                 gap: 10px;
                 align-items: center;
                 padding: 20px;
                 background-color: #4434ed;
                 border-radius: 30px;
+                @include mobile {
+                  height: 250px;
+                }
                 .contents-img-box {
                   .contents-box-img-area {
                     width: 100%;
@@ -250,32 +380,38 @@
                     height: 100%;
                     background-color: whitesmoke;
                     border-radius: 30px;
-                    padding: 30px 0 0 0;
+                    padding: 30px 50px 0 50px;
                     overflow-y: scroll !important;
 
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-content: center;
                     box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
                     transition: all 0.3s;
+
+                    @include mobile {
+                      padding: 30px 30px 0 30px;
+                    }
                     &:hover {
                       box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
                     }
 
                     .sns-popup-page-item {
+                      width: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
                       .sns-popup-title {
                         font-size: 25px;
                         font-weight: 700;
                         text-decoration: underline;
                         text-underline-position: under;
                         text-decoration-thickness: 2px;
+                        @include mobile {
+                          font-size: 15px;
+                        }
                       }
                       .sns-popup-img-area {
                         margin-top: 30px;
                         background-color: whitesmoke;
-                        width: 850px;
-                        padding: 0 100px;
+                        width: 100%;
                         height: 600px;
                         overflow: auto;
                         .sns-popup-img {
@@ -294,6 +430,12 @@
                         border: none;
                         background-color: black;
                         cursor: pointer;
+                        @include mobile {
+                          top: -20px;
+                          right: -20px;
+                          width: 50px;
+                          height: 50px;
+                        }
                         .x-ico {
                           width: 100%;
                           height: 100%;
@@ -1022,6 +1164,38 @@
 
             .hidden {
               display: none;
+            }
+
+            .contents-toggle-btn {
+              display: none;
+            }
+
+            @include mobile {
+              /*브라우저 사이즈768px이상, 1023px 이하일때*/
+              .contents-toggle-btn {
+                display: block;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                border: none;
+                background: none;
+                .contents-toggle-svg-ico {
+                  background-color: #4434ed;
+                  border-radius: 50%;
+                  width: 60px;
+                  height: 60px;
+                  padding: 15px;
+                  color: white;
+                  .p-m-ico {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+              }
+
+              .hidden {
+                display: none;
+              }
             }
           }
         }
