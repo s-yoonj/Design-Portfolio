@@ -14,7 +14,8 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 160px 20px 60px 20px;
+    padding: 130px 20px 60px 20px;
+    height: 730px;
   }
 
   .contents-wrap {
@@ -45,7 +46,9 @@
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
           width: 100%;
-          display: block;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
         }
         .contents-txt-area {
           width: 100%;
@@ -68,6 +71,7 @@
               /*브라우저 사이즈767px이하일때*/
               justify-content: center;
               align-items: center;
+              width: 100%;
             }
 
             .contents-title {
@@ -79,7 +83,8 @@
               }
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
-                font-size: 35px;
+                font-size: 30px;
+                margin-bottom: 10px;
               }
             }
 
@@ -87,7 +92,7 @@
               margin: 50px 0;
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
-                margin: 20px 0;
+                margin: 0;
               }
 
               .contents-txt-sub-title {
@@ -97,7 +102,7 @@
                 @include mobile {
                   /*브라우저 사이즈767px이하일때*/
                   display: inline;
-                  font-size: 15px;
+                  font-size: 12px;
                   margin-bottom: 0;
                 }
               }
@@ -107,7 +112,7 @@
                 @include mobile {
                   /*브라우저 사이즈767px이하일때*/
                   display: inline;
-                  font-size: 14px;
+                  font-size: 12px;
                   line-height: 30px;
                 }
               }
@@ -131,7 +136,18 @@
                 line-height: 23px;
                 @include mobile {
                   /*브라우저 사이즈767px이하일때*/
-                  font-size: 13px;
+                  display: none;
+                }
+              }
+              .mo-contents-txt {
+                display: none;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: block;
+                  margin-left: 10px;
+                  font-size: 12px;
+                  font-weight: 700;
+                  line-height: 23px;
                 }
               }
 
@@ -156,8 +172,8 @@
               row-gap: 20px;
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
+                width: 100%;
                 display: flex;
-                max-width: 100%;
                 margin: 20px 0;
                 overflow-x: scroll;
               }
@@ -258,11 +274,11 @@
 
         .contents-img-area {
           max-width: 840px;
-          height: 100%;
           background-color: rgb(235, 235, 235);
           border-radius: 50px;
           padding: 50px;
           @include mobile {
+            max-width: 613px;
             padding: 30px;
           }
           .contents-img-group {
@@ -279,13 +295,13 @@
                 margin-bottom: 50px;
                 text-align: center;
                 @include mobile {
-                  margin-bottom: 30px;
+                  margin-bottom: 20px;
                 }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
                   @include mobile {
-                    font-size: 20px;
+                    font-size: 15px;
                   }
                 }
                 .contents-img-txt {
@@ -297,7 +313,7 @@
                   text-decoration-thickness: 2px;
                   @include mobile {
                     margin-top: 10px;
-                    font-size: 13px;
+                    font-size: 10px;
                   }
                 }
               }
@@ -307,18 +323,21 @@
                 height: 100%;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(2, 1fr);
                 gap: 10px;
                 align-items: center;
                 padding: 20px;
                 background-color: #4434ed;
                 border-radius: 30px;
                 @include mobile {
-                  height: 250px;
+                  max-width: 613px;
+                  grid-template-columns: repeat(6, 1fr);
                 }
                 .contents-img-box {
+                  width: 100%;
+                  height: 100%;
                   .contents-box-img-area {
                     width: 100%;
+                    height: 100%;
                     border-radius: 20px;
                     overflow: hidden;
 
@@ -344,6 +363,10 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  @include mobile {
+                    width: 80px;
+                    height: 80px;
+                  }
 
                   .zoom-in-ico {
                     width: 100%;
@@ -461,9 +484,15 @@
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 20px;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 15px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -472,6 +501,10 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 10px;
+                    font-size: 10px;
+                  }
                 }
               }
 
@@ -498,6 +531,7 @@
                       display: flex;
                       justify-content: center;
                       align-content: center;
+
                       .contents-img {
                         width: 100%;
                         height: auto;
@@ -1075,9 +1109,15 @@
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 20px;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 15px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -1086,6 +1126,10 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 10px;
+                    font-size: 10px;
+                  }
                 }
               }
 
@@ -1100,6 +1144,10 @@
                   background-color: #fff;
                   border-radius: 30px;
                   overflow: hidden;
+                  @include mobile {
+                    max-width: 180px;
+                    max-height: 180px;
+                  }
                   .carousel-img-box-item {
                     display: flex;
                     transform: translate3d(0, 0, 0);
@@ -1113,6 +1161,10 @@
                         max-width: 500px;
                         max-height: 500px;
                         object-fit: contain;
+                        @include mobile {
+                          max-width: 180px;
+                          max-height: 180px;
+                        }
                       }
 
                       .carousel-img-txt-ico {
@@ -1127,9 +1179,18 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        @include mobile {
+                          width: 50px;
+                          height: 20px;
+                          top: 10px;
+                          left: 10px;
+                        }
                         .carousel-img-txt {
                           font-size: 20px;
                           color: white;
+                          @include mobile {
+                            font-size: 10px;
+                          }
                         }
                       }
                     }

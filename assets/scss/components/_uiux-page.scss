@@ -14,7 +14,7 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 160px 20px 60px 20px;
+    padding: 130px 20px 60px 20px;
   }
 
   .uiux-wrap {
@@ -61,7 +61,8 @@
               }
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
-                font-size: 40px;
+                font-size: 30px;
+                margin-bottom: 25px;
               }
             }
             .uiux-toggle-btn {
@@ -100,11 +101,18 @@
                 .uiux-txt-title {
                   font-size: 20px;
                   font-weight: 700;
+                  @include mobile {
+                    font-size: 15px;
+                  }
                 }
                 .uiux-txt {
                   margin-top: 10px;
                   font-size: 14px;
                   line-height: 30px;
+                  @include mobile {
+                    font-size: 10px;
+                    line-height: 23px;
+                  }
                 }
               }
 
@@ -118,6 +126,10 @@
                 @include tablet {
                   /*브라우저 사이즈768px이상, 1023px 이하일때*/
                   margin: 30px 0;
+                }
+                @include mobile {
+                  /*브라우저 사이즈768px이상, 1023px 이하일때*/
+                  margin: 25px 0;
                 }
                 .keyword-box {
                   display: inline-block;
@@ -137,14 +149,17 @@
                   }
                   @include mobile {
                     /*브라우저 사이즈767px이하일때*/
-                    width: 90px;
-                    height: 90px;
+                    width: 80px;
+                    height: 80px;
                   }
                   .keyword {
                     color: black;
                     font-size: 12px;
                     font-weight: 700;
                     line-height: 15px;
+                    @include mobile {
+                      font-size: 8px;
+                    }
                   }
                 }
                 .keyword-box-color {
@@ -157,8 +172,6 @@
                   align-items: center;
                   justify-content: center;
                   color: white;
-                  font-size: 12px;
-                  font-weight: 700;
                   @include tablet {
                     /*브라우저 사이즈768px이상, 1023px 이하일때*/
                     width: 90px;
@@ -166,14 +179,18 @@
                   }
                   @include mobile {
                     /*브라우저 사이즈767px이하일때*/
-                    width: 90px;
-                    height: 90px;
+                    width: 80px;
+                    height: 80px;
+                    font-size: 8px;
                   }
 
                   .keyword {
                     color: white;
                     font-size: 12px;
                     font-weight: 700;
+                    @include mobile {
+                      font-size: 8px;
+                    }
                   }
                 }
                 .keyword-line {
@@ -188,16 +205,25 @@
                   display: inline-block;
                   font-size: 20px;
                   font-weight: 700;
+                  @include mobile {
+                    font-size: 15px;
+                  }
                 }
                 .uiux-txt2 {
                   display: inline-block;
                   margin-left: 15px;
                   font-size: 15px;
+                  @include mobile {
+                    font-size: 10px;
+                  }
                 }
                 .keyword-img-group {
                   display: flex;
                   align-items: center;
                   margin: 30px 0;
+                  @include mobile {
+                    margin: 20px 0;
+                  }
                   .keyword-ico {
                     width: 50px;
                     height: auto;

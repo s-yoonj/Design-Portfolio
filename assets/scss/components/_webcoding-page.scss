@@ -15,7 +15,7 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 160px 20px 60px 20px;
+    padding: 130px 20px 60px 20px;
   }
 
   .webcoding-area {
@@ -38,7 +38,7 @@
         }
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
-          font-size: 35px;
+          font-size: 30px;
         }
       }
     }
@@ -60,11 +60,14 @@
             /*브라우저 사이즈767px이하일때*/
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            row-gap: 20px;
+            gap: 15px;
           }
           .pj-menu-item {
             margin: 0 20px;
             display: inline-block;
+            @include mobile {
+              margin: 0;
+            }
             .pj-menu-link {
               padding: 10px 20px;
               width: 100%;
@@ -75,11 +78,19 @@
               align-items: center;
               text-align: center;
               cursor: pointer;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                padding: 5px 10px;
+              }
 
               .pj-menu-name {
                 font-size: 13px;
                 color: white;
                 line-height: 20px;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  font-size: 10px;
+                }
               }
             }
           }
@@ -105,7 +116,7 @@
             @include mobile {
               /*브라우저 사이즈767px이하일때*/
               max-width: 300px;
-              height: 200px;
+              height: 100px;
             }
             &:hover {
               box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
