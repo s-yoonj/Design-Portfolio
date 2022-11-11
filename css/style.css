@@ -248,7 +248,7 @@ html {
 @media (max-width: 767px) {
   .container {
     /*브라우저 사이즈767px이하일때*/
-    padding: 160px 20px 60px 20px;
+    padding: 20px 20px 60px 20px;
     height: 100vh;
   }
 }
@@ -388,6 +388,12 @@ html {
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item {
   list-style: none;
 }
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item {
+    /*브라우저 사이즈767px이하일때*/
+    margin: 0 5px;
+  }
+}
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn {
   margin: 20px 0;
   width: 130px;
@@ -408,13 +414,31 @@ html {
 @media (max-width: 767px) {
   .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn {
     /*브라우저 사이즈767px이하일때*/
-    margin: 0 20px;
-    width: 50px;
-    height: 50px;
+    margin: 0 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn .menu-name {
   color: rgb(190, 190, 190);
+}
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn .menu-name {
+    /*브라우저 사이즈767px이하일때*/
+    display: none;
+  }
+}
+.container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn .mo-menu-name {
+  display: none;
+}
+@media (max-width: 767px) {
+  .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn .mo-menu-name {
+    /*브라우저 사이즈767px이하일때*/
+    display: block;
+    color: rgb(190, 190, 190);
+  }
 }
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn:hover {
   background-color: rgba(47, 102, 229, 0.85);
@@ -423,6 +447,9 @@ html {
   transition: all 1s;
 }
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn:hover .menu-name {
+  color: white;
+}
+.container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn:hover .mo-menu-name {
   color: white;
 }
 .container .main-area .menu-area .menu-list-gruop .menu-list .menu-item .menu-btn.active {
@@ -2742,7 +2769,7 @@ html {
   .webcoding-page .webcoding-area .webcoding-main .webcoding-wrap .pj-main-view .pj-img-box {
     /*브라우저 사이즈767px이하일때*/
     max-width: 300px;
-    height: 100%;
+    height: 200px;
   }
 }
 .webcoding-page .webcoding-area .webcoding-main .webcoding-wrap .pj-main-view .pj-img-box:hover {

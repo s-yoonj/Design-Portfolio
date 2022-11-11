@@ -12,7 +12,7 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 160px 20px 60px 20px;
+    padding: 20px 20px 60px 20px;
     // width: 100vw;
     height: 100vh;
   }
@@ -128,6 +128,10 @@
 
           .menu-item {
             list-style: none;
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              margin: 0 5px;
+            }
             .menu-btn {
               margin: 20px 0;
               width: 130px;
@@ -144,16 +148,35 @@
               }
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
-                margin: 0 20px;
-                width: 50px;
-                height: 50px;
+                margin: 0 10px;
+                width: 100%;
+                // width: 45px;
+                // height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
               }
 
               .menu-name {
                 color: rgb(190, 190, 190);
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: none;
+                }
+              }
+              .mo-menu-name {
+                display: none;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  display: block;
+                  color: rgb(190, 190, 190);
+                }
               }
               &:hover {
                 .menu-name {
+                  color: white;
+                }
+                .mo-menu-name {
                   color: white;
                 }
 
