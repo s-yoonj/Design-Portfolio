@@ -123,3 +123,28 @@ $(window).resize(Page__updateOffsetTop);
 
 // 스크롤이 될 때 마다, 인디케이터의 상태를 갱신
 $(window).scroll(Page__updateIndicatorActive);
+
+//모바일 메뉴
+const moMEnu = document.querySelector(".menu-area");
+
+let headerMoving = (direction) => {
+  let currentScrollValue = document.documentElement.scrollTop; //스크롤 위치 구하기
+  console.log("currentScrollValue is " + currentScrollValue); //스크롤 위치 콘솔에 출력
+  if (direction === "up") {
+    moMEnu.style.display = "block";
+  } else if (direction === "down") {
+    moMEnu.style.display = "none";
+  }
+};
+
+let prevScrollTop = 0;
+
+window.onscroll = () => {
+  let nextScrollTop = window.pageYOffset || 0; // pageYOffset -> IE 8 이하 빼고 다 됨.
+  if (nextScrollTop > prevScrollTop) {
+    headerMoving("down");
+  } else if (nextScrollTop < prevScrollTop) {
+    headerMoving("up");
+  }
+  prevScrollTop = nextScrollTop;
+};

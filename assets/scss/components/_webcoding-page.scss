@@ -15,7 +15,7 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 130px 20px 60px 20px;
+    padding: 60px 20px;
   }
 
   .webcoding-area {
@@ -48,19 +48,18 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         .pj-menu-list {
           margin-top: 40px;
           margin-bottom: 30px;
           display: flex;
           justify-content: center;
-          @include tablet {
-            /*브라우저 사이즈768px이상, 1023px 이하일때*/
-          }
           @include mobile {
             /*브라우저 사이즈767px이하일때*/
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
+            max-width: 300px;
           }
           .pj-menu-item {
             margin: 0 20px;
@@ -80,6 +79,7 @@
               cursor: pointer;
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
+                // width: 140px;
                 padding: 5px 10px;
               }
 
@@ -116,7 +116,7 @@
             @include mobile {
               /*브라우저 사이즈767px이하일때*/
               max-width: 300px;
-              height: 100px;
+              height: 130px;
             }
             &:hover {
               box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
@@ -132,6 +132,10 @@
             margin: 40px 0;
             color: white;
             text-align: center;
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              margin: 30px 0;
+            }
             .pj-txt-main {
               font-size: 15px;
 
@@ -145,15 +149,15 @@
               margin-top: 20px;
               padding: 0 10px;
               font-size: 13px;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                line-height: 20px;
+              }
             }
           }
           .pj-link-ico {
             display: flex;
-            @include mobile {
-              /*브라우저 사이즈767px이하일때*/
-              align-items: center;
-              flex-direction: column;
-            }
+
             .pj-link {
               display: flex;
               align-items: center;
@@ -161,7 +165,7 @@
               color: white;
               @include mobile {
                 /*브라우저 사이즈767px이하일때*/
-                padding: 5px 0;
+                padding: 0 5px;
               }
               .monitor-ico {
                 width: 20px;
@@ -174,6 +178,10 @@
               }
               .pj-link-name {
                 padding-left: 10px;
+                @include mobile {
+                  /*브라우저 사이즈767px이하일때*/
+                  font-size: 13px;
+                }
               }
             }
           }

@@ -14,8 +14,7 @@
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 130px 20px 60px 20px;
-    height: 730px;
+    padding: 60px 20px;
   }
 
   .contents-wrap {
@@ -46,21 +45,22 @@
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
           width: 100%;
+          height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-start;
         }
         .contents-txt-area {
           width: 100%;
           height: 100%;
           padding-right: 60px;
-          display: flex;
-          justify-content: center;
+          // display: flex;
+          // justify-content: ;
           position: relative;
           @include mobile {
             /*브라우저 사이즈767px이하일때*/
             width: 100%;
-            max-height: 300px;
+            height: 217px;
             padding-right: 0;
           }
           .contents-txt-item {
@@ -277,9 +277,16 @@
           background-color: rgb(235, 235, 235);
           border-radius: 50px;
           padding: 50px;
+          height: 100%;
           @include mobile {
-            max-width: 613px;
+            max-width: 550px;
+            max-height: 350px;
             padding: 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
           }
           .contents-img-group {
             height: 100%;
@@ -290,6 +297,13 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
 
               .contents-img-box-title {
                 margin-bottom: 50px;
@@ -329,12 +343,16 @@
                 background-color: #4434ed;
                 border-radius: 30px;
                 @include mobile {
-                  max-width: 613px;
-                  grid-template-columns: repeat(6, 1fr);
+                  width: 100%;
+                  max-height: 230px;
                 }
                 .contents-img-box {
                   width: 100%;
                   height: 100%;
+                  @include mobile {
+                    max-width: 57px;
+                    height: 57px;
+                  }
                   .contents-box-img-area {
                     width: 100%;
                     height: 100%;
@@ -387,6 +405,9 @@
                 font-size: 0;
                 text-align: center;
                 z-index: 10;
+                @include mobile {
+                  padding: 20px 0;
+                }
                 .sns-popup-page-group {
                   position: absolute;
                   top: 50%;
@@ -408,6 +429,14 @@
 
                     box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
                     transition: all 0.3s;
+
+                    @include mobile {
+                      width: 280px;
+                      max-height: 600px;
+                      // margin: 20px 0;
+                      height: auto;
+                      padding: 30px 30px 0 30px;
+                    }
 
                     @include mobile {
                       padding: 30px 30px 0 30px;
@@ -481,6 +510,13 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
@@ -531,6 +567,10 @@
                       display: flex;
                       justify-content: center;
                       align-content: center;
+                      @include mobile {
+                        max-width: 140px;
+                        max-height: 100px;
+                      }
 
                       .contents-img {
                         width: 100%;
@@ -574,6 +614,10 @@
                       display: flex;
                       justify-content: center;
                       align-content: center;
+                      @include mobile {
+                        max-width: 90px;
+                        max-height: 140px;
+                      }
                       .contents-img {
                         width: 100%;
                         height: auto;
@@ -608,12 +652,26 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 0;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -622,6 +680,11 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 0;
+                    font-size: 10px;
+                    line-height: 20px;
+                  }
                 }
               }
 
@@ -644,6 +707,10 @@
 
                     display: flex;
                     justify-content: center;
+                    @include mobile {
+                      width: 100%;
+                      max-height: 220px;
+                    }
 
                     .contents-box-bottom {
                       position: absolute;
@@ -656,6 +723,11 @@
 
                       display: flex;
                       justify-content: center;
+                      @include mobile {
+                        border-radius: 50%;
+                        bottom: -140px;
+                      }
+
                       .box-svg-ico {
                         color: white;
 
@@ -663,6 +735,10 @@
                           width: 40px;
                           height: 40px;
                           margin-top: 20px;
+                          @include mobile {
+                            width: 20px;
+                            height: 20px;
+                          }
                         }
                       }
                     }
@@ -692,6 +768,9 @@
                 font-size: 0;
                 text-align: center;
                 z-index: 10;
+                @include mobile {
+                  padding: 20px 0;
+                }
                 .lookbook-popup-page-group {
                   position: absolute;
                   top: 50%;
@@ -708,37 +787,47 @@
                     height: 100%;
                     background-color: whitesmoke;
                     border-radius: 30px;
-                    padding: 30px 0 0 0;
-                    overflow-y: scroll !important;
+                    padding: 30px 50px 0 50px;
+                    overflow: hidden;
 
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-content: center;
                     box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
                     transition: all 0.3s;
+
+                    @include mobile {
+                      width: 280px;
+                      max-height: 600px;
+                      // margin: 20px 0;
+                      height: auto;
+                      padding: 30px 30px 0 30px;
+                    }
                     &:hover {
                       box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
                     }
 
                     .lookbook-popup-page-item {
+                      width: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
                       .lookbook-popup-title {
                         font-size: 25px;
                         font-weight: 700;
                         text-decoration: underline;
                         text-underline-position: under;
                         text-decoration-thickness: 2px;
+                        @include mobile {
+                          font-size: 15px;
+                        }
                       }
                       .lookbook-popup-img-area {
                         margin-top: 30px;
-                        background-color: whitesmoke;
-                        width: 850px;
-                        padding: 0 100px;
+                        width: 100%;
                         height: 600px;
-                        overflow: auto;
+                        overflow-y: scroll !important;
+                        overscroll-behavior: none !important;
                         .lookbook-popup-img {
-                          margin-bottom: 30px;
                           width: 100%;
+                          padding-bottom: 30px;
                         }
                       }
                       .btn_close {
@@ -752,6 +841,12 @@
                         border: none;
                         background-color: black;
                         cursor: pointer;
+                        @include mobile {
+                          top: -20px;
+                          right: -20px;
+                          width: 50px;
+                          height: 50px;
+                        }
                         .x-ico {
                           width: 100%;
                           height: 100%;
@@ -774,12 +869,26 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 0;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -788,6 +897,11 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 0;
+                    font-size: 10px;
+                    line-height: 20px;
+                  }
                 }
               }
 
@@ -810,6 +924,10 @@
 
                     display: flex;
                     justify-content: center;
+                    @include mobile {
+                      width: 100%;
+                      max-height: 220px;
+                    }
 
                     .contents-box-bottom {
                       position: absolute;
@@ -822,6 +940,10 @@
 
                       display: flex;
                       justify-content: center;
+                      @include mobile {
+                        border-radius: 50%;
+                        bottom: -140px;
+                      }
                       .box-svg-ico {
                         color: white;
 
@@ -829,6 +951,10 @@
                           width: 40px;
                           height: 40px;
                           margin-top: 20px;
+                          @include mobile {
+                            width: 20px;
+                            height: 20px;
+                          }
                         }
                       }
                     }
@@ -858,6 +984,9 @@
                 font-size: 0;
                 text-align: center;
                 z-index: 10;
+                @include mobile {
+                  padding: 20px 0;
+                }
                 .event-popup-page-group {
                   position: absolute;
                   top: 50%;
@@ -874,37 +1003,46 @@
                     height: 100%;
                     background-color: whitesmoke;
                     border-radius: 30px;
-                    padding: 30px 0 0 0;
-                    overflow-y: scroll !important;
-
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-content: center;
+                    padding: 30px 50px 0 50px;
+                    overflow: hidden;
                     box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
                     transition: all 0.3s;
+
+                    @include mobile {
+                      width: 280px;
+                      max-height: 600px;
+                      // margin: 20px 0;
+                      height: auto;
+                      padding: 30px 30px 0 30px;
+                    }
                     &:hover {
                       box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
                     }
 
                     .event-popup-page-item {
+                      width: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
                       .event-popup-title {
                         font-size: 25px;
                         font-weight: 700;
                         text-decoration: underline;
                         text-underline-position: under;
                         text-decoration-thickness: 2px;
+                        @include mobile {
+                          font-size: 15px;
+                        }
                       }
                       .event-popup-img-area {
                         margin-top: 30px;
-                        background-color: whitesmoke;
-                        width: 850px;
-                        padding: 0 100px;
+                        width: 100%;
                         height: 600px;
-                        overflow: auto;
+                        overflow-y: scroll !important;
+                        overscroll-behavior: none !important;
                         .event-popup-img {
-                          margin-bottom: 30px;
                           width: 100%;
+                          padding-bottom: 30px;
                         }
                       }
                       .btn_close {
@@ -940,12 +1078,26 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
+                @include mobile {
+                  margin-bottom: 0;
+                }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
+                  @include mobile {
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                  }
                 }
                 .contents-img-txt {
                   margin-top: 20px;
@@ -954,6 +1106,11 @@
                   text-decoration: underline;
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
+                  @include mobile {
+                    margin-top: 0;
+                    font-size: 10px;
+                    line-height: 20px;
+                  }
                 }
               }
 
@@ -976,6 +1133,10 @@
 
                     display: flex;
                     justify-content: center;
+                    @include mobile {
+                      width: 100%;
+                      max-height: 220px;
+                    }
 
                     .contents-box-bottom {
                       position: absolute;
@@ -988,6 +1149,11 @@
 
                       display: flex;
                       justify-content: center;
+                      @include mobile {
+                        border-radius: 50%;
+                        bottom: -140px;
+                      }
+
                       .box-svg-ico {
                         color: white;
 
@@ -995,6 +1161,10 @@
                           width: 40px;
                           height: 40px;
                           margin-top: 20px;
+                          @include mobile {
+                            width: 20px;
+                            height: 20px;
+                          }
                         }
                       }
                     }
@@ -1024,6 +1194,9 @@
                 font-size: 0;
                 text-align: center;
                 z-index: 10;
+                @include mobile {
+                  padding: 20px 0;
+                }
                 .product-popup-page-group {
                   position: absolute;
                   top: 50%;
@@ -1040,34 +1213,43 @@
                     height: 100%;
                     background-color: whitesmoke;
                     border-radius: 30px;
-                    padding: 30px 0 0 0;
-                    overflow-y: scroll !important;
-
-                    display: flex;
-                    text-align: center;
-                    justify-content: center;
-                    align-content: center;
+                    padding: 30px 50px 0 50px;
+                    overflow: hidden;
                     box-shadow: 0 1px 10px rgba(228, 228, 228, 0.8);
                     transition: all 0.3s;
+
+                    @include mobile {
+                      width: 280px;
+                      max-height: 600px;
+                      // margin: 20px 0;
+                      height: auto;
+                      padding: 30px 30px 0 30px;
+                    }
                     &:hover {
                       box-shadow: 0 14px 28px rgba(228, 228, 228, 0.5);
                     }
 
                     .product-popup-page-item {
+                      width: 100%;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
                       .product-popup-title {
                         font-size: 25px;
                         font-weight: 700;
                         text-decoration: underline;
                         text-underline-position: under;
                         text-decoration-thickness: 2px;
+                        @include mobile {
+                          font-size: 15px;
+                        }
                       }
                       .product-popup-img-area {
                         margin-top: 30px;
-                        background-color: whitesmoke;
-                        width: 850px;
-                        padding: 0 100px;
+                        width: 100%;
                         height: 600px;
-                        overflow: auto;
+                        overflow-y: scroll !important;
+                        overscroll-behavior: none !important;
                         .product-popup-img {
                           margin-bottom: 30px;
                           width: 100%;
@@ -1106,17 +1288,25 @@
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              @include mobile {
+                height: 100%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+              }
               .contents-img-box-title {
                 margin-bottom: 50px;
                 text-align: center;
                 @include mobile {
-                  margin-bottom: 20px;
+                  margin-bottom: 0;
                 }
                 .contents-img-title {
                   font-size: 30px;
                   font-weight: 800;
                   @include mobile {
                     font-size: 15px;
+                    margin-bottom: 10px;
                   }
                 }
                 .contents-img-txt {
@@ -1127,8 +1317,9 @@
                   text-underline-position: under;
                   text-decoration-thickness: 2px;
                   @include mobile {
-                    margin-top: 10px;
+                    margin-top: 0;
                     font-size: 10px;
+                    line-height: 20px;
                   }
                 }
               }
@@ -1137,6 +1328,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include mobile {
+                  margin-top: 20px;
+                }
 
                 .contents-carousel-box-group {
                   max-width: 500px;
@@ -1145,8 +1339,9 @@
                   border-radius: 30px;
                   overflow: hidden;
                   @include mobile {
-                    max-width: 180px;
-                    max-height: 180px;
+                    max-width: 150px;
+                    max-height: 200px;
+                    border-radius: 10px;
                   }
                   .carousel-img-box-item {
                     display: flex;
@@ -1155,15 +1350,18 @@
 
                     .carousel-img-box {
                       position: relative;
-                      // max-width: 500px;
-                      // height: 500px;
+                      max-width: 500px;
+                      height: 500px;
+                      @include mobile {
+                        display: flex;
+                      }
                       .carousel-img {
                         max-width: 500px;
                         max-height: 500px;
                         object-fit: contain;
                         @include mobile {
-                          max-width: 180px;
-                          max-height: 180px;
+                          max-width: 150px;
+                          max-height: 200px;
                         }
                       }
 
@@ -1173,23 +1371,22 @@
                         height: 35px;
                         top: 20px;
                         left: 20px;
-                        background-color: #4434ed;
                         background-color: black;
                         border-radius: 30px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         @include mobile {
-                          width: 50px;
-                          height: 20px;
-                          top: 10px;
-                          left: 10px;
+                          width: 42px;
+                          height: 18px;
+                          top: 5px;
+                          left: 5px;
                         }
                         .carousel-img-txt {
                           font-size: 20px;
                           color: white;
                           @include mobile {
-                            font-size: 10px;
+                            font-size: 8px;
                           }
                         }
                       }
@@ -1203,19 +1400,34 @@
                   border: none;
                   z-index: 20;
                   cursor: pointer;
+                  @include mobile {
+                    width: 40px;
+                    height: 40px;
+                  }
 
                   svg {
                     width: 50px;
                     height: 50px;
+                    color: black;
+                    @include mobile {
+                      width: 100%;
+                      height: 100%;
+                    }
                   }
                 }
 
                 .prev-btn {
                   margin-right: 30px;
+                  @include mobile {
+                    margin-right: 15px;
+                  }
                 }
 
                 .next-btn {
                   margin-left: 30px;
+                  @include mobile {
+                    margin-left: 15px;
+                  }
                   .next-btn-ico {
                     transform: rotate(180deg);
                   }

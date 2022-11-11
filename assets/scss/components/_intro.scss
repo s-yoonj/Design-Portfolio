@@ -8,16 +8,17 @@
   background-color: black;
   @include tablet {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
-    padding: 160px 160px 60px 160px;
+    padding: 100px 20px 60px 20px;
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/
-    padding: 20px 20px 60px 20px;
+    padding: 100px 20px 60px 20px;
     // width: 100vw;
     height: 100vh;
   }
   .main-area {
     width: 100%;
+
     .main-title {
       display: flex;
       flex-direction: column;
@@ -26,6 +27,11 @@
       .main-title-01 {
         font-size: 100px;
         font-weight: 700;
+        @include tablet {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 70px;
+          margin-bottom: 20px;
+        }
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
           font-size: 50px;
@@ -35,6 +41,10 @@
       .main-title-02 {
         font-size: 120px;
         font-weight: 300;
+        @include tablet {
+          /*브라우저 사이즈767px이하일때*/
+          font-size: 90px;
+        }
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
           font-size: 60px;
@@ -51,6 +61,7 @@
         @include tablet {
           /*브라우저 사이즈767px이하일때*/
           width: 500px;
+          font-size: 25px;
         }
         @include mobile {
           /*브라우저 사이즈767px이하일때*/
@@ -65,137 +76,6 @@
         @keyframes blink {
           to {
             opacity: 0;
-          }
-        }
-      }
-    }
-
-    .menu-area {
-      position: fixed;
-      height: 100vh;
-      left: 60px;
-      top: 0;
-      z-index: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @include tablet {
-        /*브라우저 사이즈768px이상, 1023px 이하일때*/
-        position: fixed;
-        width: 100%;
-        height: 100px;
-        background-color: black;
-        border-bottom: 1px solid white;
-        top: 0;
-        left: 0;
-      }
-      @include mobile {
-        /*브라우저 사이즈767px이하일때*/
-        position: fixed;
-        height: 100px;
-        background-color: black;
-        border-bottom: 1px solid white;
-        top: 0;
-        left: 0;
-      }
-
-      .menu-list-gruop {
-        font-size: 10px;
-        font-weight: 700;
-        @include tablet {
-          /*브라우저 사이즈768px이상, 1023px 이하일때*/
-          display: flex;
-          justify-content: center;
-        }
-        @include mobile {
-          /*브라우저 사이즈767px이하일때*/
-          display: flex;
-          justify-content: center;
-        }
-
-        .menu-list {
-          @include tablet {
-            /*브라우저 사이즈768px이상, 1023px 이하일때*/
-            display: flex;
-            justify-content: center;
-          }
-          @include mobile {
-            /*브라우저 사이즈767px이하일때*/
-            display: flex;
-            justify-content: center;
-            width: 100vw;
-          }
-
-          .menu-item {
-            list-style: none;
-            @include mobile {
-              /*브라우저 사이즈767px이하일때*/
-              margin: 0 5px;
-            }
-            .menu-btn {
-              margin: 20px 0;
-              width: 130px;
-              height: 35px;
-              color: rgb(190, 190, 190);
-              border: 2px solid rgb(190, 190, 190);
-              border-radius: 30px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              @include tablet {
-                /*브라우저 사이즈768px이상, 1023px 이하일때*/
-                margin: 0 20px;
-              }
-              @include mobile {
-                /*브라우저 사이즈767px이하일때*/
-                margin: 0 10px;
-                width: 100%;
-                // width: 45px;
-                // height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              }
-
-              .menu-name {
-                color: rgb(190, 190, 190);
-                @include mobile {
-                  /*브라우저 사이즈767px이하일때*/
-                  display: none;
-                }
-              }
-              .mo-menu-name {
-                display: none;
-                @include mobile {
-                  /*브라우저 사이즈767px이하일때*/
-                  display: block;
-                  color: rgb(190, 190, 190);
-                }
-              }
-              &:hover {
-                .menu-name {
-                  color: white;
-                }
-                .mo-menu-name {
-                  color: white;
-                }
-
-                // opacity: 100%;
-                background-color: rgba(47, 102, 229, 0.85);
-                border: none;
-                transform: rotate(15deg);
-                transition: all 1s;
-              }
-              &.active {
-                .menu-name {
-                  color: white;
-                }
-                background-color: rgba(47, 102, 229, 0.85);
-                border: none;
-                transform: rotate(15deg);
-                transition: all 1s;
-              }
-            }
           }
         }
       }
@@ -216,20 +96,158 @@
       z-index: 1;
       @include tablet {
         /*브라우저 사이즈768px이상, 1023px 이하일때*/
-        width: 40px;
-        height: 40px;
-        right: 30px;
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
       }
       @include mobile {
         /*브라우저 사이즈767px이하일때*/
         width: 50px;
         height: 50px;
-        right: 30px;
-        bottom: 30px;
+        right: 15px;
+        bottom: 15px;
       }
     }
     .hidden {
       display: none;
+    }
+  }
+  .menu-area {
+    position: fixed;
+    height: 100vh;
+    left: 60px;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      /*브라우저 사이즈768px이상, 1023px 이하일때*/
+      position: fixed;
+      left: 0;
+    }
+    @include mobile {
+      /*브라우저 사이즈767px이하일때*/
+      // display: none;
+      position: fixed;
+      left: 0;
+    }
+
+    .menu-list-gruop {
+      font-size: 10px;
+      font-weight: 700;
+      @include tablet {
+        /*브라우저 사이즈768px이상, 1023px 이하일때*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        height: 80px;
+        background-color: black;
+        border-bottom: 1px solid white;
+      }
+      @include mobile {
+        /*브라우저 사이즈767px이하일때*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        height: 80px;
+        background-color: black;
+        border-bottom: 1px solid white;
+      }
+
+      .menu-list {
+        @include tablet {
+          /*브라우저 사이즈768px이상, 1023px 이하일때*/
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+        @include mobile {
+          /*브라우저 사이즈767px이하일때*/
+          display: flex;
+          justify-content: center;
+          width: 100vw;
+        }
+
+        .menu-item {
+          list-style: none;
+          @include mobile {
+            /*브라우저 사이즈767px이하일때*/
+            margin: 0 5px;
+          }
+          .menu-btn {
+            margin: 20px 0;
+            width: 130px;
+            height: 35px;
+            color: rgb(190, 190, 190);
+            border: 2px solid rgb(190, 190, 190);
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include tablet {
+              /*브라우저 사이즈768px이상, 1023px 이하일때*/
+              margin: 0 20px;
+              width: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            @include mobile {
+              /*브라우저 사이즈767px이하일때*/
+              margin: 0 10px;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .menu-name {
+              color: rgb(190, 190, 190);
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: none;
+              }
+            }
+            .mo-menu-name {
+              display: none;
+              @include mobile {
+                /*브라우저 사이즈767px이하일때*/
+                display: block;
+                color: rgb(190, 190, 190);
+              }
+            }
+            &:hover {
+              .menu-name {
+                color: white;
+              }
+              .mo-menu-name {
+                color: white;
+              }
+
+              // opacity: 100%;
+              background-color: rgba(47, 102, 229, 0.85);
+              border: none;
+              transform: rotate(15deg);
+              transition: all 1s;
+            }
+            &.active {
+              .menu-name {
+                color: white;
+              }
+              background-color: rgba(47, 102, 229, 0.85);
+              border: none;
+              transform: rotate(15deg);
+              transition: all 1s;
+            }
+          }
+        }
+      }
     }
   }
 }
