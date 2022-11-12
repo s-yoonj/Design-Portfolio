@@ -11,7 +11,7 @@
   justify-content: center;
   @include tablet {
     /*브라우저 사이즈768px이상, 1023px 이하일때*/
-    padding: 160px 100px 60px 100px;
+    padding: 60px 20px;
   }
   @include mobile {
     /*브라우저 사이즈767px이하일때*/

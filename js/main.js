@@ -126,25 +126,54 @@ $(window).scroll(Page__updateIndicatorActive);
 
 //모바일 메뉴
 const moMEnu = document.querySelector(".menu-area");
+const topBtn = document.querySelector(".top-btn");
 
 let headerMoving = (direction) => {
   let currentScrollValue = document.documentElement.scrollTop; //스크롤 위치 구하기
   console.log("currentScrollValue is " + currentScrollValue); //스크롤 위치 콘솔에 출력
   if (direction === "up") {
     moMEnu.style.display = "block";
+    headerUp();
   } else if (direction === "down") {
     moMEnu.style.display = "none";
+    headerDown();
   }
 };
+
+function headerDown() {
+  let currentScrollValue = document.documentElement.scrollTop; //스크롤 위치 구하기
+  console.log("currentScrollValue is " + currentScrollValue);
+  if (moMEnu.style.display === "flex") {
+    return;
+  } //스크롤 위치 콘솔에 출력
+  else if (currentScrollValue > 664) {
+    topBtn.style.display = "block";
+  }
+}
+
+function headerUp() {
+  let currentScrollValue = document.documentElement.scrollTop; //스크롤 위치 구하기
+  console.log("currentScrollValue is " + currentScrollValue);
+
+  if (moMEnu.style.display === "flex") {
+    return;
+  } //스크롤 위치 콘솔에 출력
+  else if (currentScrollValue < 665) {
+    moMEnu.style.display = "none";
+    topBtn.style.display = "none";
+  }
+}
 
 let prevScrollTop = 0;
 
 window.onscroll = () => {
-  let nextScrollTop = window.pageYOffset || 0; // pageYOffset -> IE 8 이하 빼고 다 됨.
-  if (nextScrollTop > prevScrollTop) {
-    headerMoving("down");
-  } else if (nextScrollTop < prevScrollTop) {
-    headerMoving("up");
+  if (window.matchMedia("(max-width: 1400px)").matches == true) {
+    let nextScrollTop = window.pageYOffset || 0; // pageYOffset -> IE 8 이하 빼고 다 됨.
+    if (nextScrollTop > prevScrollTop) {
+      headerMoving("down");
+    } else if (nextScrollTop < prevScrollTop) {
+      headerMoving("up");
+    }
+    prevScrollTop = nextScrollTop;
   }
-  prevScrollTop = nextScrollTop;
 };
